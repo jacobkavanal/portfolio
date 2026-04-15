@@ -3,6 +3,7 @@
 html {
     --color-accent: oklch(65% 50% 0);
     accent-color: var(--color-accent);
+    color-scheme: light dark;
 }
 
 body {
@@ -31,7 +32,7 @@ h1 {
 nav {
     display: flex;
     margin-bottom: 1em;
-    border-bottom: 1px solid oklch(80% 3% 200);
+    border-bottom: 1px solid oklch(50% 10% 200 / 40%);
 }
 
 nav a {
@@ -43,7 +44,7 @@ nav a {
 }
 
 nav a.current {
-    border-bottom: 0.4em solid oklch(80% 3% 200);
+    border-bottom: 0.4em solid oklch(50% 10% 200 / 40%);
     padding-bottom: 0.1em;
 }
 
@@ -96,10 +97,18 @@ textarea {
     margin: 0;
 }
 
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font: inherit;
+    font-size: 80%;
+}
+
 /* Minimal resume page polish */
 .resume-page section {
     padding-block: 1em;
-    border-top: 1px solid oklch(88% 2% 200);
+    border-top: 1px solid oklch(50% 10% 200 / 30%);
 }
 
 .resume-page section:first-of-type {
