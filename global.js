@@ -47,7 +47,9 @@ export async function fetchGitHubData(username) {
 // Step 3: Dynamic navigation
 const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
 const firstPathSegment = location.pathname.split("/").filter(Boolean)[0];
-const BASE_PATH = location.hostname.endsWith("github.io") ? "/portfolio/" : "/";
+const BASE_PATH = !isLocalhost && location.hostname.endsWith("github.io")
+    ? `/${firstPathSegment}/`
+    : "/";
 const pages = [
     { url: "",           title: "Home" },
     { url: "projects/",  title: "Projects" },
