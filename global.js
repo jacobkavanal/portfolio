@@ -19,7 +19,11 @@ export async function fetchJSON(url) {
     }
 }
 
-export function renderProjects(projects, containerElement, headingLevel = "h2") {
+export function renderProjects(projects = [], containerElement, headingLevel = "h2") {
+    if (!containerElement) {
+        return;
+    }
+
     containerElement.innerHTML = "";
 
     for (const project of projects) {
@@ -27,6 +31,7 @@ export function renderProjects(projects, containerElement, headingLevel = "h2") 
 
         article.innerHTML = `
             <${headingLevel}>${project.title}</${headingLevel}>
+            <p class="project-year">${project.year}</p>
             <img src="${project.image}" alt="${project.title}">
             <p>${project.description}</p>
         `;
@@ -40,9 +45,13 @@ export async function fetchGitHubData(username) {
 }
 
 // Step 3: Dynamic navigation
-const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+const firstPathSegment = location.pathname.split("/").filter(Boolean)[0];
+const BASE_PATH = isLocalhost
     ? "/"
-    : "/portfolio/";
+    : firstPathSegment
+        ? `/${firstPathSegment}/`
+        : "/";
 
 const pages = [
     { url: "",           title: "Home" },

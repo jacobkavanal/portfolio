@@ -1,33 +1,33 @@
 [
     {
-        "title": "Lorem ipsum dolor sit",
+        "title": "portfolio",
         "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+        "description": "jakes portfolio"
     },
     {
-        "title": "Consectetur adipisicing elit autem",
+        "title": "mixify",
         "year": "2026",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Dolorum asperiores repellat vero ducimus amet nesciunt."
+        "description": "Music mixing web app project."
     },
     {
-        "title": "Aliquid enim minus omnis",
+        "title": "learning",
+        "year": "2026",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "jake and ryans site"
+    },
+    {
+        "title": "chefai",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Ad perspiciatis esse fuga saepe laboriosam quisquam."
+        "description": "data analysis and reccomendation systems for chef.ai - a ucsd project"
     },
     {
-        "title": "Reprehenderit error recusandae maxime",
+        "title": "dsc40proj4",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Quidem aliquam minima accusantium libero in dolore."
-    },
-    {
-        "title": "Earum expedita sed fuga",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Temporibus praesentium omnis impedit consequatur sint suscipit."
+        "description": "DSC 40 project repository."
     },
     {
         "title": "Maiores molestiae quam quidem",
