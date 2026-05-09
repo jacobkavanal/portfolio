@@ -196,3 +196,126 @@ textarea {
     margin-bottom: 0.4em;
 }
 
+/* Meta page: summary stats */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+    gap: 0.5em 1em;
+    margin: 1em 0;
+}
+
+.stats dt {
+    grid-row: 1;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: color-mix(in oklch, canvastext 60%, canvas);
+    letter-spacing: 0.05em;
+}
+
+.stats dd {
+    grid-row: 2;
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+/* Meta page: scatterplot */
+#chart {
+    margin-block: 1em;
+}
+
+#chart svg {
+    width: 100%;
+    height: auto;
+}
+
+.gridlines line {
+    stroke: oklch(50% 10% 200 / 25%);
+    stroke-dasharray: 2 2;
+}
+
+.gridlines path {
+    display: none;
+}
+
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+    transform: scale(1.5);
+}
+
+circle.selected {
+    fill: #ff6b6b;
+}
+
+/* Meta page: tooltip */
+dl.info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.6em;
+    row-gap: 0.2em;
+    margin: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, visibility;
+}
+
+dl.info dt {
+    color: color-mix(in oklch, canvastext 55%, canvas);
+    font-weight: normal;
+}
+
+dl.info dd {
+    margin: 0;
+    font-weight: 500;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.tooltip {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background-color: color-mix(in oklch, canvas 85%, transparent);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0.4em 1em oklch(0% 0 0 / 15%);
+    border-radius: 0.4em;
+    padding: 0.8em 1em;
+    pointer-events: none;
+    max-width: 24em;
+}
+
+/* Meta page: brush selection */
+@keyframes marching-ants {
+    to {
+        stroke-dashoffset: -8;
+    }
+}
+
+.selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+}
+
+.brush-hint {
+    margin-top: 0.25em;
+    margin-bottom: 1.25em;
+    font-size: 0.95em;
+    color: color-mix(in oklch, canvastext 65%, canvas);
+}
+
+#selection-count {
+    margin-top: 1em;
+    font-style: italic;
+    color: color-mix(in oklch, canvastext 70%, canvas);
+}
+
