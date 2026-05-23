@@ -319,3 +319,76 @@ dl.info[hidden]:not(:hover, :focus-within) {
     color: color-mix(in oklch, canvastext 70%, canvas);
 }
 
+/* Lab 8: entry transition for new circles */
+@starting-style {
+    circle {
+        r: 0;
+    }
+}
+
+/* Lab 8: slider label */
+#slider-label {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-block: 1em;
+}
+
+/* Lab 8: scrollytelling layout */
+#scrolly-1 {
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
+
+#scrolly-1 > * {
+    flex: 1;
+}
+
+#scatter-story {
+    position: relative;
+}
+
+#scatter-plot {
+    position: sticky;
+    top: 0;
+    height: 50vh;
+}
+
+.step {
+    padding-block: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Lab 8: files unit visualization */
+#files {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 0.5em;
+    margin-block: 1em;
+}
+
+#files > div {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: span 2;
+}
+
+#files dd {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1em;
+    align-items: start;
+    align-content: start;
+    padding-top: 0.6em;
+    margin: 0;
+}
+
+.loc {
+    width: 0.5em;
+    aspect-ratio: 1;
+    background: var(--color, steelblue);
+    border-radius: 50%;
+    display: flex;
+}
+
